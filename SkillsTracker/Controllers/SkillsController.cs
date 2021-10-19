@@ -28,11 +28,11 @@ namespace SkillsTracker.Controllers
         }
 
         [HttpGet("skills/form")]
-        public IActionResult Form()
+        public IActionResult DisplayForm()
         {
             
 
-            string html = "<form method='post' action='form'>" +
+            string html = "<form method='post' action='form/completed'>" +
                 "<label for= 'date'> Date:</label>"+
                  "<input type='date' id = 'date' name='date' />" +
                  "<br>"+
@@ -64,7 +64,7 @@ namespace SkillsTracker.Controllers
         }
 
 
-        [HttpPost("skills/form")]
+        [HttpPost("skills/form/completed")]
         public IActionResult Form(string date,string c,string j,string p)
         {
             string html = "<h1>"+date+"</h1>"+
